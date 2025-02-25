@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My Tennis Club - List of all members
+{% endblock %}
+
+
+{% block content %}
+  <div class="mycard">
+    <h1>Members</h1>
+    <ul>
+      {% for x in mymembers %}
+        <li onclick="window.location = 'details/{{ x.id }}'">{{ x.firstname }} {{ x.lastname }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.zdnet.com%2Farticle%2Fces-2022-asus-launches-17-inch-folding-oled-laptop-and-space-themed-zenbook%2F&psig=AOvVaw1WKRJnaeweYEZP2gsfmGLw&ust=1740489473789000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOC-3t2y3IsDFQAAAAAdAAAAABAE">
+{% endblock %}
